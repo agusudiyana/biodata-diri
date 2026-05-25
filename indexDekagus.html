@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Website Profil Mahasiswa</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#1d2671,#c33764);
+}
+
+.wrapper{
+display:flex;
+width:90%;
+max-width:1000px;
+margin:40px auto;
+background:#ffffff;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.sidebar{
+width:220px;
+background:#2c3e50;
+padding:20px;
+}
+
+.sidebar h2{
+color:#fff;
+text-align:center;
+}
+
+.sidebar a{
+display:block;
+color:#ecf0f1;
+text-decoration:none;
+padding:10px;
+margin-bottom:8px;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.sidebar a:hover{
+background:#34495e;
+}
+
+.content{
+flex:1;
+padding:30px;
+}
+
+.box{
+display:none;
+}
+
+.box.active{
+display:block;
+}
+
+.box h3{
+border-left:6px solid #c33764;
+padding-left:10px;
+color:#2c3e50;
+}
+
+.card{
+background:#f1f1f1;
+padding:20px;
+border-radius:10px;
+margin-top:15px;
+}
+
+/* ICON */
+
+.icon-box{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.icon-btn{
+display:flex;
+align-items:center;
+gap:8px;
+padding:10px 16px;
+border-radius:25px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.icon-btn img{
+width:20px;
+}
+
+.wa{background:#25D366;}
+.ig{background:#E1306C;}
+.mail{background:#D44638;}
+.tel{background:#0b8457;}
+
+.gallery{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+margin-top:10px;
+}
+
+.gallery img{
+width:180px;
+border-radius:10px;
+}
+
+
+ol{
+padding-left:30px;
+margin-left:0;
+}
+
+</style>
+
+<script>
+function showPage(page){
+let pages=document.querySelectorAll(".box");
+pages.forEach(p=>p.classList.remove("active"));
+document.getElementById(page).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="sidebar">
+<h2>MENU</h2>
+
+<a onclick="showPage('home')">Home</a>
+<a onclick="showPage('biodata')">Biodata</a>
+<a onclick="showPage('pendidikan')">Pendidikan</a>
+<a onclick="showPage('hobi')">Hobi</a>
+<a onclick="showPage('skill')">Skill</a>
+<a onclick="showPage('sosial')">Sosial Media</a>
+<a onclick="showPage('kontak')">Kontak</a>
+<a onclick="showPage('galeri')">Galeri</a>
+
+</div>
+
+<div class="content">
+
+<div id="home" class="box active">
+<h3>Home</h3>
+<div class="card">
+Selamat datang di website profil saya. Website ini berisi informasi tentang biodata, pendidikan, keterampilan, hobi, serta kontak yang dapat dihubungi.
+</div>
+</div>
+
+<div id="biodata" class="box">
+<h3>Biodata</h3>
+<div class="card">
+<table>
+<tr><td>Nama</td><td>:</td><td>I Kadek Agus Udiyana</td></tr>
+<tr><td>NIM</td><td>:</td><td>2413231015</td></tr>
+<tr><td>Jurusan</td><td>:</td><td>Informatika</td></tr>
+</table>
+</div>
+</div>
+
+<div id="pendidikan" class="box">
+<h3>Perjalanan Pendidikan</h3>
+<div class="card">
+
+<ol type="I">
+<li>TK Sila Giri Bukit Batu (2011-2012)</li>
+<li>SD Negeri 2 Samplangan (2012-2018)</li>
+<li>SMP Negeri 3 Gianyar (2018-2021)</li>
+<li>SMA Negeri 1 Gianyar (2021-2024)</li>
+<li>Universitas Hindu Negeri I Gusti Bagus Sugriwa Denpasar (2024-sekarang)</li>
+</ol>
+
+</div>
+</div>
+
+<div id="hobi" class="box">
+<h3>Hobi</h3>
+<div class="card">
+<ul>
+<li>Bermain Game</li>
+<li>Bermain Musik</li>
+</ul>
+</div>
+</div>
+
+<div id="skill" class="box">
+<h3>Keterampilan Teknis</h3>
+<div class="card">
+<ul>
+<li>HTML</li>
+<li>Microsoft Word</li>
+<li>Microsoft Excel</li>
+</ul>
+</div>
+</div>
+
+<div id="sosial" class="box">
+<h3>Sosial Media</h3>
+<div class="card">
+
+<div class="icon-box">
+
+<a href="https://wa.me/6287825258736" target="_blank" class="icon-btn wa">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+WhatsApp
+</a>
+
+<a href="https://instagram.com/kdkagus163" target="_blank" class="icon-btn ig">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+Instagram
+</a>
+
+</div>
+
+</div>
+</div>
+
+<div id="kontak" class="box">
+<h3>Kontak</h3>
+<div class="card">
+
+<div class="icon-box">
+
+<a href="mailto:agusudiyana457@gmail.com" class="icon-btn mail">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png">
+Email
+</a>
+
+<a href="tel:+6287825258736" class="icon-btn tel">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Phone_font_awesome.svg">
+Telepon
+</a>
+
+</div>
+
+</div>
+</div>
+
+<div id="galeri" class="box">
+<h3>Galeri</h3>
+<div class="card">
+
+<div class="gallery">
+<img src="ff.jpeg">
+<img src="pp.jpeg">
+<img src="ee.jpeg">
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
